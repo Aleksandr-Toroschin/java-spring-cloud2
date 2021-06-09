@@ -1,0 +1,12 @@
+server:
+  port: 12212
+  servlet:
+    context-path: /market
+spring:
+  application:
+    name: front-service
+eureka:
+  client:
+    serviceUrl.defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    registerWithEureka: true
+    fetchRegistry: true
