@@ -1,0 +1,25 @@
+<p></p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Категория</th>
+        <th>Наименование</th>
+        <th>Цена</th>
+        <th>Cart</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="p in products">
+        <td>{{p.id}}</td>
+        <td>{{p.categoryTitle}}</td>
+        <td>
+            <a href={{infoPage+p.id}}>{{p.title}}</a>
+        </td>
+        <td>{{p.cost}}</td>
+        <td>
+            <button class="btn btn-outline-success" ng-click="addProductInCart(p.id)">В корзину</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
